@@ -4,11 +4,19 @@ class Funcionario{
     this.dataCont = dataCont
   }
 
-  getNome() => this.nome
-  setNome : palavra => this.nome = palavra
+  getName(){
+    return this.nome
+  }
+  setName(palavra){
+    this.nome = palavra
+  }
 
-  getDataCont() => this.dataCont
-  setDataCont : data => this.dataCont = data
+  getData(){
+    return this.dataCont
+  }
+  setData(numero){
+    this.dataCont = numero
+  }
 }
 
 
@@ -20,14 +28,29 @@ class Pn extends Funcionario{
     this.beneficios = beneficios
   }
 
-  getCpf() => this.cpf
-  setNome : numero => this.cpf = numero
+  getCpf(){
+    return this.cpf
+  }
 
-  getSalario() => this.salario
-  setSalario : valor => this.salario = valor
+  setCpf(numero){
+    this.cpf = numero
+  }
 
-  getBeneficios() => this.beneficios
-  setBeneficios : lista => this.beneficios = lista
+  getSalario(){
+    return this.salario
+  }
+
+  setSalario(valor){
+    this.salario = valor
+  }
+
+  getBeneficios(){
+    return this.beneficios
+  }
+
+  setBeneficios(b){
+    this.beneficios = b
+  }
 }
 
 
@@ -38,9 +61,32 @@ class Pj extends Funcionario{
     this.salario = salario
   }
 
-  getSalario() => this.salario
-  setSalario : valor => this.salario = valor
+  getCnpj(){
+    return this.cpf
+  }
 
-  getCnpj() => this.cnpj
-  setCnpj : numero => this.cnpj = numero
+  setCnpj(numero){
+    this.cpf = numero
+  }
+
+  getSalario(){
+    return this.salario
+  }
+
+  setSalario(valor){
+    this.salario = valor
+  }
 }
+
+
+const pessoa = new Pn()
+pessoa.setName('Calcifer')
+console.log(pessoa.getName())
+pessoa.setCpf('444444444444')
+console.log(pessoa.getCpf())
+
+const empresa = new Pj()
+empresa.setCnpj('3333333333')
+empresa.getCnpj()
+empresa.setSalario(123)
+empresa.getSalario()

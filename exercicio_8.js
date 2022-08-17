@@ -1,9 +1,22 @@
 const Pessoa = {
-  nome: 'Calcifer',
-  idade: '99',
-  getName() => this.nome
-  setName : palavra => this.nome = palavra
+  nome: '',
+  idade: '',
+  getNome(){
+    return this.nome
+  }
+  setNome(palavra){
+    this.nome = palavra
+  }
 
-  getIdade() => this.getIdade
-  setIdade: numero => this.idade = numero
+  getIdade(){
+    return this.idade
+  }
+  setIdade(numero){
+    this.idade = numero
+  }
 }
+
+const p = new Pessoa ()
+p.setNome('Calcifer')
+p.setIdade('999')
+console.log(p.getIdade())
