@@ -3,12 +3,12 @@ const Pessoa = {
   idade: '999',
 
   getIdade: function(){
-    this.idade = '999'
-  }
+    return this.idade
+  },
 
   getNome: function(){
-    this.nome = 'Calcifer'
-  }
+    return this.nome 
+  },
 
 }
 
